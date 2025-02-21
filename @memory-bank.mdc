@@ -1,81 +1,63 @@
-# メモリバンク
+---
+description: Memory bank for storing system state, configurations, and important information
+version: 1.0.0
+date: 2025-02-21
+---
 
-## プロジェクト情報
-- プロジェクト名: Cursor Auto Rules Agile Workflow
-- 開始日時: 2025-02-21 18:48
-- 目的: アジャイルワークフローの自動化ルールの実装
-- 開発手法: LDD（ロギングドリブン開発）
+# System Memory Bank
 
-## LDD統合情報
-### ロギング構造
-- ベーステンプレート: @logging_template.mdc
-- ログディレクトリ: .logs/
-- ログフォーマット: Markdown/MDC
+## Environment Configuration
+### Operating System
+- Type: Windows
+- Version: 10.0.26100
+- Shell: PowerShell 7+
 
-### フィードバックループ
-- ユーザーフィードバック収集
-- AIによる分析と最適化
-- ルール自動調整メカニズム
+### Project Structure
+- Base Path: /c%3A/Users/shuns/Dev/AI_for_U/agent/Auto-coder-agent_Cursor_Roo_code
+- Key Directories:
+  - `.cursor/rules/`: Cursor rule definitions
+  - `logs/`: System and operation logs
+  - `docs/`: Project documentation
+  - `xnotes/`: Additional notes and records
 
-### メトリクス追跡
-- コード品質指標
-- テストカバレッジ
-- ドキュメント完全性
-- ルール最適化効果
+## Active States
+### Current Tasks
+- ID: {TASK_ID}
+- Status: {STATUS}
+- Priority: {PRIORITY}
+- Dependencies: {DEPENDENCIES}
 
-## 実行履歴
-### 初期化
-- @logging_template.mdcの作成と拡張
-- 基本的なロギング構造の確立
-- LDD統合の実装
+### System Status
+- Last Operation: {LAST_OPERATION}
+- Current State: {CURRENT_STATE}
+- Active Processes: {ACTIVE_PROCESSES}
 
-### ルール最適化
-- 自動チューニングメカニズムの統合
-- フィードバックベースの改善
-- メトリクスベースの調整
+## Historical Data
+### Completed Tasks
+- Task History: {TASK_HISTORY}
+- Success Rate: {SUCCESS_RATE}
+- Common Issues: {COMMON_ISSUES}
 
-## コンテキスト保持
-### ルールと制約
-- ファイル形式: .md/.mdc
-- 言語: 日本語
-- 実行環境: Windows
-- ログ駆動開発原則の遵守
+### System Changes
+- Configuration Changes: {CONFIG_CHANGES}
+- Version Updates: {VERSION_UPDATES}
+- Critical Events: {CRITICAL_EVENTS}
 
-### 重要な決定事項
-1. LDD（ロギングドリブン開発）の採用と拡張
-2. アジャイルワークフローの自動化
-3. 構造化されたログ記録の実装
-4. フィードバックループの確立
-5. メトリクスベースの最適化
+## References
+### Documentation
+- API References: {API_REFS}
+- User Guides: {USER_GUIDES}
+- Technical Specs: {TECH_SPECS}
 
-## タスク履歴
-[タスクID: INIT-001]
-- 目的: 初期環境セットアップ
-- ステータス: 完了
-- 成果物: @logging_template.mdc
-- 学習: 基本ログ構造の確立
+### Error Handling
+- Known Issues: {KNOWN_ISSUES}
+- Solutions: {SOLUTIONS}
+- Prevention Measures: {PREVENTION}
 
-[タスクID: TASK-001]
-- 目的: アジャイルワークフロー自動化の開始
-- ステータス: 実行中
-- 成果物: .logs/TASK-001-start.md
-- 学習: LDD統合の重要性
-
-## 最適化履歴
-### ルール調整
-- 初期ルールセットの確立
-- フィードバックベースの改善
-- メトリクスによる検証
-
-### パフォーマンス改善
-- ログ構造の最適化
-- コンテキスト効率の向上
-- フィードバックループの効率化
-
-## 次のステップ
-1. 環境チェックの完了
-2. 必要なファイルの存在確認の完了
-3. メモリバンクの更新
-4. 初期化完了レポートの作成
-5. LDD統合の検証
-6. メトリクス収集の開始
+---
+## Usage Guidelines
+1. Update state information after each operation
+2. Maintain version history for critical changes
+3. Document all system modifications
+4. Keep error solutions updated
+5. Regular cleanup of obsolete data

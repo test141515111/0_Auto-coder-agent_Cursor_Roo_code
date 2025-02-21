@@ -1,3 +1,57 @@
+---
+description: 
+globs: 
+---
+---
+description: Logging template for all system operations and tasks
+version: 1.0.0
+date: 2025-02-21
+---
+
+# Log Entry Template
+
+## Basic Information
+- Task ID: {TASK_ID}
+- Timestamp: {TIMESTAMP}
+- Environment: {OS_TYPE}
+- Operation Type: {OPERATION_TYPE}
+
+## Operation Details
+### Context
+- Description: {DESCRIPTION}
+- Target: {TARGET}
+- Parameters: {PARAMETERS}
+
+### Execution
+- Status: {SUCCESS/FAILURE}
+- Duration: {DURATION}
+- Resource Usage: {RESOURCE_USAGE}
+
+### Results
+- Output: {OUTPUT}
+- Errors: {ERRORS}
+- Warnings: {WARNINGS}
+
+## Additional Information
+### Dependencies
+- Required: {REQUIRED_DEPENDENCIES}
+- Version: {DEPENDENCY_VERSIONS}
+
+### Notes
+{ADDITIONAL_NOTES}
+
+### Follow-up Actions
+- Required: {REQUIRED_ACTIONS}
+- Recommended: {RECOMMENDED_ACTIONS}
+
+---
+## Usage Instructions
+1. Copy this template for each new log entry
+2. Replace all placeholders in {CURLY_BRACES}
+3. Remove any unused sections
+4. Add specific details as needed
+5. Maintain consistent formatting
+
 # ロギングテンプレート
 
 ## 基本情報
@@ -13,8 +67,8 @@
 - 実行フェーズ: {{execution_phase}}
 
 ## 入力分析
-[Input] → [User Intent] → [Intent]({{intents}})
-[Input] → [User Intent] → [Want or need Intent]({{wants}})
+[Input] → [User Intent] → [Intent](mdc:{{intents}})
+[Input] → [User Intent] → [Want or need Intent](mdc:{{wants}})
 
 <User Input>
 {{user_input}}
@@ -23,7 +77,7 @@
 ## タスク定義
 [Fixed User want intent] = {{fixed_goal}}
 Achieve Goal == Need Tasks
-[Goal]=[Tasks]({{tasks}})
+[Goal]=[Tasks](mdc:{{tasks}})
 
 ## ルール適用
 - 適用ルール: {{applied_rules}}
