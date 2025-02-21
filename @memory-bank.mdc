@@ -1,4 +1,8 @@
 ---
+description: 
+globs: 
+---
+---
 description: Memory bank for storing system state, configurations, and important information
 version: 1.0.0
 date: 2025-02-21
