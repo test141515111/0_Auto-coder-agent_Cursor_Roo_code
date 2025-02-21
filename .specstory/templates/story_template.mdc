@@ -1,0 +1,101 @@
+---
+title: {STORY_TITLE}
+id: {STORY_ID}
+type: story
+status: draft
+priority: medium
+created: {CREATED_DATE}
+updated: {UPDATED_DATE}
+author: {AUTHOR}
+assignee: {ASSIGNEE}
+tags: []
+---
+
+# {STORY_TITLE}
+
+## 概要
+{STORY_OVERVIEW}
+
+## 背景と目的
+### 背景
+{BACKGROUND}
+
+### 目的
+{PURPOSE}
+
+## 要件
+### 機能要件
+- {FUNCTIONAL_REQUIREMENT_1}
+- {FUNCTIONAL_REQUIREMENT_2}
+
+### 非機能要件
+- {NON_FUNCTIONAL_REQUIREMENT_1}
+- {NON_FUNCTIONAL_REQUIREMENT_2}
+
+## 受け入れ基準
+- [ ] {ACCEPTANCE_CRITERIA_1}
+- [ ] {ACCEPTANCE_CRITERIA_2}
+
+## 技術的な注意点
+### アーキテクチャ
+- {ARCHITECTURE_NOTE_1}
+- {ARCHITECTURE_NOTE_2}
+
+### 実装詳細
+- {IMPLEMENTATION_DETAIL_1}
+- {IMPLEMENTATION_DETAIL_2}
+
+### 制約事項
+- {CONSTRAINT_1}
+- {CONSTRAINT_2}
+
+## テスト要件
+### テストシナリオ
+1. {TEST_SCENARIO_1}
+2. {TEST_SCENARIO_2}
+
+### テスト基準
+- [ ] {TEST_CRITERIA_1}
+- [ ] {TEST_CRITERIA_2}
+
+## 関連情報
+### 関連ストーリー
+- {RELATED_STORY_1}
+- {RELATED_STORY_2}
+
+### 参考資料
+- {REFERENCE_1}
+- {REFERENCE_2}
+
+## タイムライン
+- 作成日: {CREATED_DATE}
+- 開始予定日: {PLANNED_START_DATE}
+- 完了予定日: {PLANNED_END_DATE}
+- 実際の開始日: {ACTUAL_START_DATE}
+- 実際の完了日: {ACTUAL_END_DATE}
+
+## 進捗管理
+### マイルストーン
+1. [ ] {MILESTONE_1}
+2. [ ] {MILESTONE_2}
+
+### 現在のステータス
+- 進捗率: {PROGRESS_PERCENTAGE}%
+- 状態: {CURRENT_STATUS}
+- 最終更新: {LAST_UPDATED}
+
+## レビュー履歴
+### レビュー記録
+1. {REVIEW_1}
+   - レビュアー: {REVIEWER_1}
+   - 日時: {REVIEW_DATE_1}
+   - コメント: {REVIEW_COMMENT_1}
+
+### 承認履歴
+- [ ] 機能レビュー完了
+- [ ] コードレビュー完了
+- [ ] テスト完了
+- [ ] 最終承認
+
+## 備考
+{ADDITIONAL_NOTES} 

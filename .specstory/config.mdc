@@ -1,0 +1,92 @@
+---
+description: SpecStory configuration for Cursor integration
+version: 1.0.0
+date: 2025-02-21
+---
+
+# SpecStory Configuration
+
+## Project Settings
+- Project Name: Auto-coder-agent_Cursor_Roo_code
+- Base URL: https://specstory.com/
+- Repository: Auto-coder-agent_Cursor_Roo_code
+
+## Directory Structure
+- `.specstory/`: Root directory for SpecStory
+  - `config.mdc`: This configuration file
+  - `history/`: Story history and versions
+  - `templates/`: Story templates
+  - `current/`: Active stories
+  - `archive/`: Completed stories
+
+## Story Format
+### Template Structure
+```markdown
+---
+title: {STORY_TITLE}
+id: {STORY_ID}
+status: {STATUS}
+priority: {PRIORITY}
+created: {CREATED_DATE}
+updated: {UPDATED_DATE}
+---
+
+## Overview
+{STORY_OVERVIEW}
+
+## Requirements
+- {REQUIREMENT_1}
+- {REQUIREMENT_2}
+...
+
+## Acceptance Criteria
+- [ ] {CRITERIA_1}
+- [ ] {CRITERIA_2}
+...
+
+## Technical Notes
+- {TECHNICAL_NOTE_1}
+- {TECHNICAL_NOTE_2}
+...
+
+## Related Stories
+- {RELATED_STORY_1}
+- {RELATED_STORY_2}
+...
+```
+
+## Integration Settings
+### Cursor Integration
+- Rules Directory: `.cursor/rules/`
+- Template Location: `.specstory/templates/`
+- History Format: Markdown/MDC
+- Auto-sync: Enabled
+
+### Logging Integration
+- Log Template: `@logging_template.mdc`
+- Story Logs: `.specstory/history/`
+- System Logs: `logs/`
+
+## Workflow Configuration
+### Story States
+1. Draft
+2. In Review
+3. Approved
+4. In Progress
+5. Testing
+6. Completed
+7. Archived
+
+### Priority Levels
+1. Critical
+2. High
+3. Medium
+4. Low
+5. Backlog
+
+## Automation Rules
+1. Auto-create story template on new branch
+2. Link commits to stories via ID
+3. Update story status based on branch state
+4. Generate history entries for major changes
+5. Sync with Cursor rules when applicable 
