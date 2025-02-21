@@ -1,20 +1,27 @@
-# Auto-coder-agent Documentation
+# プロジェクトドキュメント
 
-## はじめに
-このドキュメントでは、Auto-coder-agentの使用方法と機能について説明します。
+## 概要ドキュメント
+- [README](../readme.md) - プロジェクト概要
+- [アーキテクチャ](architecture.md) - システム設計と構造
+- [開発ガイド](development-guide.md) - 開発プロセスとガイドライン
 
-## 目次
-1. [システム概要](./overview.md)
-2. [セットアップガイド](./setup.md)
-3. [使用方法](./usage.md)
-4. [ルール設定](./rules.md)
-5. [ログ管理](./logging.md)
-6. [トラブルシューティング](./troubleshooting.md)
+## LDD関連ドキュメント
+- [LDDワークフロー](ldd/workflow.md) - ログ駆動開発の基本フロー
+- [ログ管理](ldd/logging.md) - ログシステムの使用方法
+- [メトリクス](ldd/metrics.md) - メトリクス収集と分析
+- [フィードバック](ldd/feedback.md) - フィードバックループの実装
 
-## クイックスタート
-1. リポジトリのクローン
-2. 必要なツールのインストール
-3. 初期設定の実行
-4. プロジェクトの開始
+## 技術ドキュメント
+- [環境設定](technical/environment.md) - 開発環境のセットアップ
+- [ツール設定](technical/tools.md) - 使用ツールの設定方法
+- [CI/CD](technical/cicd.md) - 継続的インテグレーション/デプロイメント
 
-詳細な手順については、各セクションのドキュメントを参照してください。 
+## 運用ドキュメント
+- [監視](operations/monitoring.md) - システム監視とアラート
+- [メンテナンス](operations/maintenance.md) - システムメンテナンス
+- [トラブルシューティング](operations/troubleshooting.md) - 問題解決ガイド
+
+## 貢献ガイド
+- [コントリビューション](contributing.md) - 貢献方法
+- [コーディング規約](coding-standards.md) - コード規約
+- [レビュープロセス](review-process.md) - コードレビューのプロセス 
