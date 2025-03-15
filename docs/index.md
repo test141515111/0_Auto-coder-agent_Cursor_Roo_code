@@ -5,6 +5,7 @@
 - [アーキテクチャ](architecture.md) - システム設計と構造
 - [開発ガイド](development-guide.md) - 開発プロセスとガイドライン
 - [更新履歴](changelog.md) - プロジェクトの更新履歴
+- [LDD概要](ldd/workflow.md) - ログ駆動開発の概要
 
 ## LDD関連ドキュメント
 - [LDDワークフロー](ldd/workflow.md) - ログ駆動開発の基本フロー
@@ -25,4 +26,4 @@
 ## 貢献ガイド
 - [コントリビューション](contributing.md) - 貢献方法
 - [コーディング規約](coding-standards.md) - コード規約
-- [レビュープロセス](review-process.md) - コードレビューのプロセス  
+- [レビュープロセス](review-process.md) - コードレビューのプロセス    
