@@ -23,6 +23,7 @@ date: 2025-02-21
   - `logs/`: System and operation logs
   - `docs/`: Project documentation
   - `xnotes/`: Additional notes and records
+  - `devin/`: Devin agent templates and integration
 
 ## Active States
 ### Current Tasks
@@ -30,6 +31,9 @@ date: 2025-02-21
 - Status: {STATUS}
 - Priority: {PRIORITY}
 - Dependencies: {DEPENDENCIES}
+- Goal State: {GOAL_STATE}
+- Current Step: {CURRENT_STEP}
+- Prerequisites: {PREREQUISITES}
 
 ### System Status
 - Last Operation: {LAST_OPERATION}
@@ -57,6 +61,16 @@ date: 2025-02-21
 - Known Issues: {KNOWN_ISSUES}
 - Solutions: {SOLUTIONS}
 - Prevention Measures: {PREVENTION}
+
+## Working Backwards Analysis
+### Goal States
+- {GOAL_ID}: {GOAL_DESCRIPTION}
+
+### Prerequisites Chains
+- {GOAL_ID}: {PREREQUISITES_CHAIN}
+
+### Forward Execution Plans
+- {GOAL_ID}: {FORWARD_PLAN}
 
 ---
 ## Usage Guidelines

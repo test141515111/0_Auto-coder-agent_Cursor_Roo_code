@@ -1,0 +1,128 @@
+---
+description: Devin Agent Template with Working Backwards Methodology
+version: 1.0.0
+date: 2025-03-16
+---
+
+# Devin Agent Template
+
+## Working Backwards Methodology
+
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+# Jinja2 Playbook Template
+
+## Procedure
+
+{% for step in procedures %}
+{{ loop.index }}. **{{ step.title }}**
+
+   - {{ step.description }}
+
+{% endfor %}
+
+## Advice & Pointers
+
+{% for advice in advice_pointers %}
+- {{ advice }}
+{% endfor %}
+
+## Forbidden Actions
+
+{% for forbidden_action in forbidden_actions %}
+- ⚠️ **{{ forbidden_action }}**
+{% endfor %}
+
+## User Intent Interpretation
+
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+**User Input:**
+
+```
+{{ user_input }}
+```
+
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+### Abstracted Intent
+- Original Intent: {{ original_intent }}
+- Want or Need Intent: {{ want_or_need_intent }}
+
+### Goals
+
+{% for goal in fixed_goals %}
+- ✅ **{{ goal }}**
+{% endfor %}
+
+## Working Backwards Analysis
+
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+### Goal State
+{{ goal_state }}
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+### Step-Back Questions
+{% for question in step_back_questions %}
+{{ loop.index }}. {{ question }}
+{% endfor %}
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+### Prerequisites Chain
+{% for prerequisite in prerequisites_chain %}
+{{ loop.index }}. {{ prerequisite }}
+{% endfor %}
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+### Forward Execution Plan
+{% for step in forward_execution_plan %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+
+## Task Breakdown
+
+{% for task in tasks %}
+- [Task {{ loop.index }}] {{ task }}
+{% endfor %}
+
+## Agent Execution Stack
+
+{% for task in agent_tasks %}
+{{ loop.index }}. Task: **{{ task.name }}**
+   - Assigned Agent: {{ task.agent }}
+   - Description: {{ task.description }}
+   - Expected Outcome: {{ task.outcome }}
+{% endfor %}
+
+## Environment & Initialization Check
+
+- Operating System: **{{ system_information.operating_system }}**
+- Default Shell: **{{ system_information.default_shell }}**
+- Home Directory: **{{ system_information.home_directory }}**
+- Current Working Directory: **{{ system_information.current_working_directory }}**
+
+## Continuous Execution & Testing
+
+- Unit Testing: {{ testing.unit_testing }}
+- Overall Testing: {{ testing.overall_testing }}
+- Continuous Execution: {{ continuous_execution }}
+
+## Git Usage
+- Commit Message: **AIが実行した内容**
+
+## Visual Guidelines
+
+### Invalid Format (NG)
+```xml
+<thinking>
+ここにコンテキストが挿入されます。
+</thinking>
+```
+
+### Valid Format (OK)
+
+```
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+ここにコンテキストが挿入されます。
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
+```
