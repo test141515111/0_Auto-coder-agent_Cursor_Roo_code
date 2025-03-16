@@ -1,14 +1,14 @@
-# Cursor Auto Rules Agile Workflow
+# Auto-coder-agent_Cursor_Roo_code
 
 ## Overview
-This project is a framework for implementing agile workflow automation rules, utilizing Log-Driven Development (LDD) to achieve an efficient development process.
+This project is a codebase for an automated coding agent using Cursor and Roo.
+It adopts Log-Driven Development (LDD) to effectively manage and utilize AI interaction history.
 
 ## Features
-- Adoption of Log-Driven Development (LDD)
-- Agile Workflow Automation
-- Structured Logging System
-- AI-driven Optimization
-- Metrics-based Improvements
+- Automatic saving of Cursor AI interaction history
+- Development management through Log-Driven Development (LDD)
+- Multilingual support (Japanese/English)
+- Metrics-based quality management
 
 ## Directory Structure
 ```
@@ -26,20 +26,21 @@ EN/
 4. Verify Environment Settings
 
 ## Usage
-1. Starting a Task
-   - Task ID Assignment
-   - Logging Initiation
-   - Context Setting
 
-2. Execution and Monitoring
-   - Application of Automation Rules
-   - Metrics Collection
-   - Feedback Collection
+### 1. Basic Usage
+1. Open the project in Cursor
+2. Start AI interaction
+3. All operations are automatically logged
 
-3. Optimization
-   - Performance Analysis
-   - Rule Adjustment
-   - Process Improvement
+### 2. Log Management
+1. Record logs according to `@logging_template.mdc`
+2. Select appropriate log categories
+3. Regularly check metrics
+
+### 3. Feedback Loop
+1. Record feedback after task completion
+2. Integrate AI analysis results
+3. Implement improvement suggestions
 
 ## Development Process
 - LDD-based Development Cycle
