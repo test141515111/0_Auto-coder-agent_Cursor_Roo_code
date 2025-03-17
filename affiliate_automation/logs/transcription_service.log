@@ -1,0 +1,31 @@
+2025-03-17 05:10:05,274 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:05,275 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:05,276 - TranscriptionService - INFO - 文字起こし結果を保存しました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:05,277 - TranscriptionService - INFO - 文字起こし結果を読み込みました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:05,277 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:05,279 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:05,280 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:05,280 - TranscriptionService - INFO - 音声ファイルの文字起こしを開始: test.pdf
+2025-03-17 05:10:05,280 - TranscriptionService - ERROR - サポートされていないファイル形式: pdf
+2025-03-17 05:10:15,399 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:15,400 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:15,402 - TranscriptionService - INFO - 文字起こし結果を保存しました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:15,402 - TranscriptionService - INFO - 文字起こし結果を読み込みました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:15,403 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:15,405 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:15,406 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:15,406 - TranscriptionService - INFO - 音声ファイルの文字起こしを開始: test.pdf
+2025-03-17 05:10:15,406 - TranscriptionService - ERROR - サポートされていないファイル形式: pdf
+2025-03-17 05:10:24,136 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:24,136 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:24,138 - TranscriptionService - INFO - 文字起こし結果を保存しました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:24,139 - TranscriptionService - INFO - 文字起こし結果を読み込みました: /tmp/transcription_test/test_transcription.json
+2025-03-17 05:10:24,139 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:24,391 - TranscriptionService - INFO - 音声ファイルの文字起こしを開始: test.mp3
+2025-03-17 05:10:24,392 - TranscriptionService - ERROR - 文字起こし中にエラーが発生しました: APIエラー
+2025-03-17 05:10:24,392 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:24,393 - TranscriptionService - INFO - 音声ファイルの文字起こしを開始: test.mp3
+2025-03-17 05:10:24,394 - TranscriptionService - INFO - 文字起こし完了: 17 文字, 処理時間: 0.00 秒
+2025-03-17 05:10:24,394 - TranscriptionService - INFO - 音声文字起こしサービスが初期化されました
+2025-03-17 05:10:24,394 - TranscriptionService - INFO - 音声ファイルの文字起こしを開始: test.pdf
+2025-03-17 05:10:24,395 - TranscriptionService - ERROR - サポートされていないファイル形式: pdf
