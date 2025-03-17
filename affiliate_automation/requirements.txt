@@ -7,6 +7,9 @@ python-dateutil>=2.8.2
 # OpenAI API
 openai>=1.0.0
 
+# Groq API
+groq>=0.4.0
+
 # Web development (for website generation)
 flask>=2.0.0
 jinja2>=3.0.0
@@ -18,3 +21,6 @@ numpy>=1.23.0
 # Utilities
 tqdm>=4.64.0
 python-dotenv>=0.20.0
+
+# Audio processing
+pydub>=0.25.1

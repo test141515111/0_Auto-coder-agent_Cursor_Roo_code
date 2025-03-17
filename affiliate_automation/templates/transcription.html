@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声文字起こしツール</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .metrics {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .metric {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            flex: 1;
+            margin: 0 5px;
+        }
+        .sample-button {
+            background-color: #27ae60;
+            margin-left: 10px;
+        }
+        .sample-button:hover {
+            background-color: #219653;
+        }
+        .button-group {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Groq Whisper 音声文字起こしツール</h1>
+    <div class="container">
+        <form action="/transcribe" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="audio_file">音声ファイルを選択（対応形式: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, webm）</label>
+                <div class="button-group">
+                    <input type="file" id="audio_file" name="audio_file" accept=".flac,.mp3,.mp4,.mpeg,.mpga,.m4a,.ogg,.wav,.webm">
+                    <button type="button" class="sample-button" id="load_sample">サンプル読み込み</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="language">言語（オプション）</label>
+                <select id="language" name="language">
+                    <option value="">自動検出</option>
+                    <option value="ja" selected>日本語</option>
+                    <option value="en">英語</option>
+                    <option value="zh">中国語</option>
+                    <option value="ko">韓国語</option>
+                    <option value="fr">フランス語</option>
+                    <option value="de">ドイツ語</option>
+                    <option value="es">スペイン語</option>
+                    <option value="it">イタリア語</option>
+                    <option value="ru">ロシア語</option>
+                </select>
+            </div>
+            <button type="submit">文字起こし開始</button>
+        </form>
+        
+        {% if result %}
+        <div class="result">
+            <h2>文字起こし結果</h2>
+            <p>{{ result.text }}</p>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <h3>処理時間</h3>
+                    <p>{{ "%.2f"|format(result.processing_time) }} 秒</p>
+                </div>
+                <div class="metric">
+                    <h3>モデル</h3>
+                    <p>{{ result.model }}</p>
+                </div>
+                <div class="metric">
+                    <h3>言語</h3>
+                    <p>{{ result.language or "自動検出" }}</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if error %}
+        <div class="result" style="border-color: #e74c3c;">
+            <h2 style="color: #e74c3c;">エラー</h2>
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <script>
+        document.getElementById('load_sample').addEventListener('click', function() {
+            // サンプルファイルの読み込み処理をここに実装
+            alert('サンプル音声ファイルを読み込みます。実際の実装では、サンプル音声ファイルがフォームにセットされます。');
+        });
+    </script>
+</body>
+</html>

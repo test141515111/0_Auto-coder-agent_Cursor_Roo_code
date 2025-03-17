@@ -15,6 +15,9 @@ import argparse
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 
+# Import the transcription service
+from agent.audio_transcription.transcription_service import TranscriptionService
+
 # Import configuration and modules
 sys.path.append('/home/ubuntu/affiliate_automation')
 from config.config import AFFILIATE_NICHES, AI_TOOLS, WORKFLOW_CONFIG
@@ -40,7 +43,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="Affiliate Marketing Automation System")
     parser.add_argument("--niche", type=str, default="online_learning",
                         help="Affiliate marketing niche to focus on")
-    parser.add_argument("--mode", type=str, choices=["full", "research", "content", "website", "marketing"],
+    parser.add_argument("--mode", type=str, choices=["full", "research", "content", "website", "marketing", "transcription"],
                         default="full", help="Operation mode")
     parser.add_argument("--domain", type=str, default=None,
                         help="Domain name for the affiliate website")
@@ -347,8 +350,67 @@ def main():
         run_website_mode(args.niche, args.domain)
     elif args.mode == "marketing":
         run_marketing_mode(args.niche)
+    elif args.mode == "transcription":
+        run_transcription_mode()
     
     return 0
+
+def run_transcription_mode():
+    """
+    音声文字起こしモードを実行します。
+    """
+    logger.info("音声文字起こしモードを開始します")
+    
+    from flask import Flask, request, render_template, redirect, url_for
+    import os
+    import uuid
+    
+    app = Flask(__name__, template_folder="/home/ubuntu/affiliate_automation/templates")
+    
+    # 一時ファイル用のディレクトリを作成
+    os.makedirs("/home/ubuntu/affiliate_automation/data/uploads", exist_ok=True)
+    os.makedirs("/home/ubuntu/affiliate_automation/data/transcriptions", exist_ok=True)
+    
+    # 音声文字起こしサービスを初期化
+    transcription_service = TranscriptionService()
+    
+    @app.route('/')
+    def index():
+        return render_template('transcription.html')
+    
+    @app.route('/transcribe', methods=['POST'])
+    def transcribe():
+        if 'audio_file' not in request.files:
+            return render_template('transcription.html', error="ファイルがアップロードされていません")
+        
+        audio_file = request.files['audio_file']
+        
+        if audio_file.filename == '':
+            return render_template('transcription.html', error="ファイルが選択されていません")
+        
+        # ファイルを一時保存
+        filename = str(uuid.uuid4()) + os.path.splitext(audio_file.filename)[1]
+        filepath = os.path.join("/home/ubuntu/affiliate_automation/data/uploads", filename)
+        audio_file.save(filepath)
+        
+        # 言語を取得
+        language = request.form.get('language', None)
+        if language == '':
+            language = None
+        
+        # 文字起こしを実行
+        result = transcription_service.transcribe_audio(filepath, language)
+        
+        if result["success"]:
+            # 結果を保存
+            transcription_service.save_transcription(result)
+            return render_template('transcription.html', result=result)
+        else:
+            return render_template('transcription.html', error=result["error"])
+    
+    # Flaskアプリを実行
+    print("音声文字起こしサーバーを開始します。http://localhost:5000 にアクセスしてください。")
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -5,6 +5,9 @@ Configuration file for the Affiliate Marketing Automation System.
 # OpenAI API Configuration
 OPENAI_API_KEY = "${OPENAI_API_KEY}"  # Will be loaded from environment variable
 
+# Groq API Configuration
+GROQ_API_KEY = "${GROQ_API_KEY}"  # Will be loaded from environment variable
+
 # Top Affiliate Niches Configuration (2025)
 AFFILIATE_NICHES = {
     "online_learning": {
@@ -129,6 +132,14 @@ AI_TOOLS = {
         "reporting": {
             "frequency": "weekly",
             "metrics": ["traffic", "conversion_rate", "revenue", "top_products"]
+        }
+    },
+    "audio_transcription": {
+        "groq_whisper": {
+            "api_endpoint": "https://api.groq.com/openai/v1/audio/transcriptions",
+            "model": "whisper-large-v3",
+            "supported_formats": ["flac", "mp3", "mp4", "mpeg", "mpga", "m4a", "ogg", "wav", "webm"],
+            "max_file_size_mb": 25
         }
     }
 }
